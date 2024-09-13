@@ -1,0 +1,128 @@
+/* Add btn write font size adjust */
+.write{
+    font-size: 1rem;
+}
+/* --------------------------------------------------------------- */
+.svg-flex{
+    height: 24px;
+    width: 24px;
+    background-color: blue;
+
+}
+.mail_container{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    .mails_container{
+        background-color: var(--clr-nav-100);
+        width: 95%;
+        height: 95%;
+        border-radius: 10px;
+        box-shadow: 0 0 2px black;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 250px 250px 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "folders mails messages";
+
+        .mails_sidebar{
+            grid-area: folders;
+            /* background-color: rgb(255, 255, 57); */
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            grid-template-areas: 
+            "msh"
+            "ml";
+            
+            
+            .mails_sidebar_header{
+                grid-area: msh;
+                border-top-left-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-bottom: 1px solid var(--clr-bb-grey-light);
+                box-shadow: 0 0 1px;
+                /* background-color: red; */
+
+                .sidebar_item{
+                    width: 94%;
+                    height: auto;
+                    display: flex;
+                    position: relative;
+                    justify-content: center;   
+                
+                    .add-new, .new-mssg{
+                        border: none;
+                        background-color: var(--clr-add-deal);
+
+                    }
+                    .hover:hover{
+                        background-color: var(--clr-nav-85);
+                    }
+                    
+                }
+                .minimize{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            
+                .br-tr-br{
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                .br-tl-bl{
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+                .pl-pr{
+                    padding-left: .3rem;
+                    padding-right: .3rem;
+                }
+            }
+
+            .mails_list{
+                grid-area: ml;
+                background-color: lightcoral;
+                border-bottom-left-radius: 10px;
+                border-right: 1px solid var(--clr-nav-85);
+                display: block;
+
+                .mail_item{
+                    width: 100%;
+                    height: 70px;
+                    background-color: rgb(255, 109, 228);
+                    
+                }
+                
+            }
+            
+        }
+        .mails_area{
+            grid-area: mails;
+            background-color: orange;
+            border-right: 1px solid var(--clr-nav-85);
+        }
+
+        .messages_area{
+            grid-area: messages;
+            background-color: yellow;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+    }
+}

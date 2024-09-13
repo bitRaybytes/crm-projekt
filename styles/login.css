@@ -1,0 +1,708 @@
+/* CSS Reset */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ---------------------------------------------Grid-Container */
+
+body {
+  position: relative;
+  display: grid;
+  max-width: 100svw;
+  height: 100svh;
+  grid-template-columns: 200px 2fr 2fr 200px;
+  grid-template-rows: 60px 2fr 60px;
+  gap: 10px;
+  grid-template-areas:
+    "logo header1 header2 header"
+    "sidel image login sider"
+    "footer footer footer footer";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------------------------------- background color */
+.bg {
+  /* background: linear-gradient(90deg, red, blue); */
+  background-color: #f8f8f8;
+  z-index: 9;
+}
+
+/* ------------------------------------------Logo Section */
+
+.logo__container {
+  /* background-color: lightcoral; */
+  display: flex;
+  grid-area: logo;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-left: 1.5rem;
+  align-items: center;
+}
+
+.logo__image {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.logo-link {
+  line-height: 1rem;
+  padding-left: 0.5rem;
+}
+
+.line-space {
+  letter-spacing: 1rem;
+  /* font-weight: 600; */
+}
+
+.logo {
+  --logo-wh: 40px;
+  fill: black;
+  width: var(--logo-wh);
+  height: var(--logo-wh);
+}
+.logo:hover {
+  fill: rgba(0, 0, 0, 0.7);
+}
+.logo-link a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.rotate {
+  display: inline-block;
+
+  transform: scale(-1, 1);
+}
+
+/* -----------------------------------------------Header-Section */
+.header__container {
+  grid-area: header1;
+
+  width: 100%;
+  display: grid;
+  align-content: center;
+  height: 100%;
+  /* background-color: royalblue; */
+}
+
+.header__lists {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.header__lists {
+  display: flex;
+  max-width: 100%;
+  height: 100%;
+  justify-content: left;
+  position: relative;
+}
+
+.header__links {
+  padding: 1px 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightcoral; */
+  transition: 0.2s ease-in-out;
+}
+
+.header-link {
+  position: relative;
+  color: #000;
+  /* text-decoration: none; */
+}
+
+.header-link:hover {
+  color: #000000;
+}
+
+.header-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------Login-Section */
+.login__container {
+  --fs-labels: 1.3rem;
+  --fs-inputs: 1.3rem;
+  --fs-title: 2rem;
+  --fs-links: 0.8rem;
+
+  grid-area: login;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.274);
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  grid-template-columns: 500px;
+  grid-template-rows: 50px 100px 100px 65px 30px;
+  /* gap: 1rem; */
+  row-gap: 1rem;
+  grid-template-areas:
+    "title"
+    "username"
+    "password"
+    "button"
+    "maintenance";
+
+  border-radius: 16px;
+  z-index: 1;
+}
+.login__title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* line-height: .8rem; */
+}
+
+.username__field {
+  grid-area: username;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-label {
+  width: 100%;
+  font-size: var(--fs-labels);
+  display: flex;
+  justify-content: center;
+}
+.username-input {
+  display: flex;
+  width: 350px;
+  border-radius: 5px;
+  font-size: var(--fs-inputs);
+}
+
+.login__container [placeholder] {
+  text-align: center;
+  font-size: 1rem;
+  height: calc(1.3rem + 1rem);
+  margin: 8px 0px;
+}
+
+.password__field {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: password;
+}
+.password-label {
+  width: 100%;
+  font-size: var(--fs-labels);
+  display: flex;
+  justify-content: center;
+}
+.password-input {
+  display: flex;
+  width: 350px;
+  border-radius: 5px;
+  font-size: var(--fs-inputs);
+}
+
+.fields__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__input {
+  font-size: var(--fs-inputs);
+}
+.login__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  grid-area: button;
+}
+.btn__wrap {
+  width: 250px;
+  height: 44px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__wrap:before,
+.btn__wrap:after {
+  content: "";
+  position: absolute;
+
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 0;
+  animation: steam 20s linear infinite;
+  border-radius: 0.5rem;
+}
+
+.login-btn {
+  font-weight: 500;
+  width: 400px;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.1s ease-in-out;
+  border: 1px solid black;
+  z-index: 1;
+
+  background-color: red;
+}
+.login-btn:hover {
+  color: black;
+  font-weight: 700;
+  animation-name: steam;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  border: none;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* @keyframes animated {
+  0% {
+    box-shadow: 0 0 10px red;
+  }
+  
+
+  50%{
+    box-shadow: 0 0 10px red;
+  }
+  
+  100% {
+    box-shadow: 0 0 10px red;
+
+  }
+} */
+
+.btn__wrap::after {
+  filter: blur(10px);
+}
+
+.user__maintenance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  grid-area: maintenance;
+}
+.user__maintenance > p {
+  padding: 0 1.5rem;
+}
+
+.user__maintenance > p > a {
+  font-weight: 500;
+}
+
+/* -----------------------------------------------Image-Section */
+.image__container {
+  grid-area: image;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.title {
+  font-size: 6rem;
+  position: absolute;
+  display: flex;
+  top: 12%;
+  left: 50%;
+  translate: -40% -0%;
+}
+.bg-gradient {
+  background-image: linear-gradient(90deg, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+}
+
+.image-layer {
+  position: absolute;
+
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  /* position: absolute; */
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+/* ------------------------------------------------Footer-Section */
+.footer__container {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(90deg, red, blue);
+}
+
+.footer__links {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  align-items: center;
+  width: 250px;
+  position: absolute;
+}
+
+.f-links__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem;
+}
+
+.f-links__container p > a:hover {
+  font-weight: 500;
+  color: white;
+}
+
+.width {
+  width: 100px;
+}
+
+.legal__wrapper {
+  display: flex;
+  position: absolute;
+  padding-left: 1.5rem;
+  margin-top: 0.8rem;
+  text-decoration: underline rgba(255, 255, 255, 0.411);
+}
+.legal {
+  font-size: 0.6rem;
+  letter-spacing: 5px;
+  margin: -1.2rem 0;
+  padding-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.411);
+}
+
+/* ------------------------------------------circles */
+.shadow {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.37);
+}
+
+.circle-1 {
+  box-shadow: 0 0 0 10px rgba(0, 255, 76, 0.815);
+
+  border-radius: 40% 30% 60% / 80% 50% 90%;
+  position: absolute;
+  top: 1rem;
+  left: -15rem;
+  width: 100px;
+  height: 100px;
+  z-index: 5;
+  display: flex;
+  animation: morphing 8s ease-in-out infinite;
+  transition: all 0.1s ease-in-out;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 60% 40% 30% / 60% 30% 70%;
+  }
+  
+
+
+  50% {
+    border-radius: 30% 60% 70% / 50% 60% 30%;
+
+  }
+
+  100% {
+    border-radius: 60% 40% 30% / 60% 30% 70%;
+  }
+}
+
+.circle-2 {
+  background: linear-gradient(40deg, red, blue);
+  border-radius: 80% 70% 60% / 40% 60% 20%;
+  position: absolute;
+  top: 0rem;
+  left: -12rem;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  animation: morphing-2 15s ease-in-out infinite;
+  transition: all 0.1s ease-in-out;
+  animation-delay: 0s;
+  z-index: 4;
+}
+
+@keyframes morphing-2 {
+  0% {
+    border-radius: 30% 60% 70% / 50% 60% 30%;
+  }
+
+  50% {
+    border-radius: 60% 40% 30% / 60% 30% 70%;
+  }
+
+  100% {
+    border-radius: 30% 60% 70% / 50% 60% 30%;
+  }
+}
+
+.circle-3 {
+  background: linear-gradient(40deg, red, blue);
+  border-radius: 35% 97% 50% / 80% 25% 40%;
+  position: absolute;
+  top: 5rem;
+  left: -25rem;
+  rotate: 180deg;
+  z-index: 2;
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  animation: morphing-3 20s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes morphing-3 {
+  0% {
+    border-radius: 50% 80% 70% / 50% 60% 30%;
+  }
+
+  50% {
+    border-radius: 20% 60% 30% / 60% 30% 70%;
+  }
+
+  100% {
+    border-radius: 50% 80% 30% / 50% 60% 30%;
+  }
+}
+
+.circle-4 {
+  background: linear-gradient(40deg, red, blue);
+  border-radius: 30% 90% 50% 20%;
+  position: absolute;
+  rotate: 90deg;
+  top: 5rem;
+  /* left: -5rem; */
+  z-index: 6;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  animation: morphing-4 5s ease infinite;
+  /* transition: all 1s ease; */
+}
+
+@keyframes morphing-4 {
+  0% {
+    border-radius: 20% 80% 70%;
+    rotate: 180deg;
+    transform: translateX(-15px);
+  }
+
+  50% {
+    border-radius: 60% 30% 20%;
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    border-radius: 20% 80% 60%;
+    rotate: 360deg;
+    transform: translateY(15px);
+  }
+}
+
+/* PopUp for creating an account and password reset */
+
+.overlay {
+  position: absolute;
+  display: none;
+
+  width: 100svw;
+  height: 100svh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.create-account__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ 
+}
+.popup_wrapper {
+  background-color: rgb(128, 128, 128);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 10s ease-in;
+  padding: 50px;
+  top: -26.8rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+.popup_form_container{
+
+  
+}
+.display-none {
+  display: none;
+}
+.create_account_title {
+  display: flex;
+  justify-content: center;
+}
+.create_username {
+  border-radius: 5px;
+  width: 350px;
+  padding: 20px 0;
+}
+.margin {
+  padding-top: 1rem;
+  padding-bottom: -1rem;
+  /* margin-top: 1rem;
+  margin-bottom: -1rem; */
+}

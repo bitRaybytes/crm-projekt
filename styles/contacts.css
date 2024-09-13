@@ -1,0 +1,90 @@
+:root{
+    --clr-tbl-100: rgb(191, 191, 191);
+    --clr-tbl-row-e:  rgb(250, 250, 250);
+    --clr-tbl-row-o:  rgb(245, 245, 245);
+
+    /* border radius */
+    --br-2: 2px;
+    --br-3: 3px;
+    --br-4: 4px;
+    --br-5: 5px;
+    --br-10: 10px;
+    --br-15: 15px;
+
+}
+
+.contact_wrapper{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    z-index: 0;
+}
+
+table{
+    display: block;
+    position: absolute;
+    height: 70%;
+    /* box-shadow: 0 0 1px black; */
+    margin-bottom: 25px;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    border-collapse: collapse;
+    
+
+    th{
+        padding: 0 12px;
+        padding: 5px 15px;
+        background-color: var(--clr-tbl-100);
+    }
+
+    td{
+        padding: 5px 15px;    
+    }
+    
+
+    tr:nth-child(odd){
+        background-color: var(--clr-tbl-row-o);
+    }
+
+    tr:nth-child(even){
+        background-color: var(--clr-tbl-row-e);
+    }
+
+    tr{
+        border-bottom: 1px dotted var(--clr-tbl-100);
+    
+        th:first-child{
+            border-top-left-radius: var(--br-10);
+        }
+        th:last-child{
+            border-top-right-radius: var(--br-10)
+        }
+    }
+    td:not(:first-child){
+        border-left: 1px dotted var(--clr-tbl-100);
+    }
+    th:not(:first-child){
+        border-left: 1px dotted var(--clr-tbl-row-o);
+    
+    }
+    
+   
+
+}
+
+tr:hover:not(:first-child){
+    background-color: var(--clr-tbl-100) !important;
+
+    cursor: pointer; 
+}
+
+tr:before{
+    content: "";
+}
+tr:after:hover{
+    content: "";
+    border-left: 1px solid orange;
+}

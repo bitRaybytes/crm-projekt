@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <!-- CSS Stylesheet -->
+     <!-- Dashboard -->
+    <link rel="stylesheet" href="/CRM-Projekt/styles/db_styles.css">
+    <!-- Contacts -->
+     <link rel="stylesheet" href="/CRM-Projekt/styles/contacts.css">
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet">
+ 
+     <!-- Fontawesome - Icons -->
+     <script src="https://kit.fontawesome.com/526379e621.js" crossorigin="anonymous"></script>
+    
+</head>
+<body class="body_wrapper" id="click">
+    <div class="borderbottom"></div>
+    <!-- <div class="grid_container"> -->
+        
+        <div id="overlay"></div>
+        <!-- Sidebar -->
+        <div class="sidebar_wrapper" id="sidebarmenu">
+            <!-- Sidebar Menu -->
+            
+            <main class="sidebar_grid_container">
+                
+                <section class="sidebar_header">
+                            <!-- Logo Icon-->
+                            <div class="logo">
+                                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m298-456 143-104-143-104-36 48 77 56-77 56 36 48Zm364 0 36-48-77-56 77-56-36-48-143 104 143 104ZM420-278l60-60 60 60 60-60 39 39 42-42-81-81-60 60-60-60-60 60-60-60-81 81 42 42 39-39 60 60Zm60 198q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                            </div>
+                            <!-- Slogan Paragraph-->
+                            <div class="slogan">
+                                <a class="line-height link-hover" href="">
+                                    <span class="line-space">keep</span>
+                                    <br>
+                                    <span class="second-line">up sales</span>
+                                </a>
+                            </div>
+                            <!-- Hamburger Menu Icon -->
+                            <div class="hamburger_container" id="hamburger">
+                                <abbr title="show/hide sidebar">
+                                    <svg class="hamburger-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                                </abbr>
+                            </div>
+                </section>
+    
+                <!-- Sidebar Links Items -->
+                <section class="sidebar_links_container">
+                    <!-- Item1 -->
+                    <div class="link_wrapper">
+                        <div class="link_item">
+                            <ul class="pipelines">
+                                <li><a class="fw link-hover-w" href="dashboard.html">Pipelines</a>
+                                    <ul class="pipeline_links">
+                                        <li><a class="link-hover-w" href="">anlegen</a></li>
+                                        <li><a class="link-hover-w" href="">bearbeiten</a></li>
+                                        <li><a class="link-hover-w" href="">wechseln</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="pipeline-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-40.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-23.5 48.5T486-314q-33 0-58.5-20.5T390-396l-66 26q14 48 43.5 77.5T444-252v52Zm36 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+    
+                            <!-- Item2 -->
+                            <ul class="contacts">
+                                <li><a class="fw link-hover-w" href="contacts.html">Kontakte</a>
+                                    <ul class="contacts_links">
+                                        <li><a class="link-hover-w" href="">anlegen</a></li>
+                                        <li><a class="link-hover-w" href="">bearbeiten</a></li>
+                                        <li><a class="link-hover-w" href="">Übersicht</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="contacts-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M185-80q-17 0-29.5-12.5T143-122v-105q0-90 56-159t144-88q-40 28-62 70.5T259-312v190q0 11 3 22t10 20h-87Zm147 0q-17 0-29.5-12.5T290-122v-190q0-70 49.5-119T459-480h189q70 0 119 49t49 119v64q0 70-49 119T648-80H332Zm148-484q-66 0-112-46t-46-112q0-66 46-112t112-46q66 0 112 46t46 112q0 66-46 112t-112 46Z"/></svg>
+    
+                            <!-- Item3 -->
+                            <ul class="companies">
+                                <li><a class="fw link-hover-w" href="companies.html">Unternehmen</a>
+                                    <ul class="companies_links">
+                                        <li><a class="link-hover-w" href="">anlegen</a></li>
+                                        <li><a class="link-hover-w" href="">bearbeiten</a></li>
+                                        <li><a class="link-hover-w" href="">Übersicht</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="companies-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>
+    
+                            <!-- Item4 -->
+                            <ul class="mails">
+                                <li><a class="fw link-hover-w" href="mail.html">E-Mail</a>
+                                    <ul class="mail_links">
+                                        <li><a class="link-hover-w" href="">E-Mail schreiben</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="mails-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg>
+    
+                            <!-- Item5 -->
+                            <ul class="calendar">
+                                <li><a class="fw link-hover-w" href="calendar.html">Kalender</a>
+                                    <ul class="calendar_links">
+                                        <li><a class="link-hover-w" href="">Eintragen</a></li>
+                                        <li><a class="link-hover-w" href="">Übersicht</a></li>
+                                        <li><a class="link-hover-w" href="">Wochenüberblick</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="calendar-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+    
+    
+                            <!-- Item6 -->
+                            <ul class="analyze">
+                                <li><a class="fw link-hover-w" href="analyze.html">Analyse</a>
+                                    <ul class="analyze_links">
+                                        <li><a class="link-hover-w" href="">Analyse-Übersicht</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg class="analyze-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z"/></svg>
+    
+                            <!-- Item7 -->
+                            <ul class="options">
+                                <ul class="options_links">
+                                    <li><a class="fw link-hover-w" href="options.html">Einstellungen</a></li>
+                                </ul>
+                            </ul>
+                            <svg class="options-svg svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="footer_menu_container">
+                    <div class="footer_wrapper">
+                        <div class="footer_items">
+                            <p class="legal pad-l">rechtliches</p>
+                                <a class="lfs pad-l link-hover-w" href="#">Impressum</a>
+                                <a class="lfs pad-l link-hover-w" href="#">AGB</a>
+                                <a class="lfs pad-l link-hover-w" href="#">DSGVO</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Header with Searchbar and Profile/Logout Items -->
+    
+        <section class="header_wrapper" id="header">
+            <section class="header_grid">
+    
+                <div class="items_wrapper" id="header_items">
+                    <abbr title="Profile">
+                        <div class="profile_item circle profile-btn-header">
+                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                        </div>
+                    </abbr>
+                    <abbr title="Logout">
+                        <div class="logout_item circle logout-btn-header">
+                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
+                        </div>
+                    </abbr>
+                </div>
+                
+                
+            </section>
+            <div class="searchbar_wrapper" id="header_items">
+                <input class="searchbar" type="search" placeholder="Suche">
+                <abbr title="Add">
+                    <div class="circle add-btn-header">
+                        <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                    </div>
+                </abbr>
+            </div>
+        </section>
+
+        <!-- Dashboard Area // Standard-View After Login = Pipeline -->
+        <section class="dashboard">
+            <main class="db_grid_container" id="click">
+                <!-- Fitler Buttons -->
+                <div class="db_filter">
+                    <div class="btn-group box-shadow-1">
+                        <!-- Deals Filter -->
+                        <abbr title="Filter by contacts">
+                            <button class="btn-filter pointer btn-btl-bbl btn-hover">
+                                <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960">
+                                    <path
+                                    d="M360-240h440v-107H360v107ZM160-613h120v-107H160v107Zm0 187h120v-107H160v107Zm0 186h120v-107H160v107Zm200-186h440v-107H360v107Zm0-187h440v-107H360v107ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Z" />
+                                </svg>
+                            </button>
+                        </abbr>
+                        <!-- Order Filters  -->
+                        <abbr title="Show filters">
+                            <button class="btn-filter pointer btn-bt-bb btn-hover ">
+                                <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960">
+                                    <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
+                                </svg>
+                            </button>
+                        </abbr>
+                        <abbr title="Show contacts">
+                            <button class="btn-filter pointer btn-btr-bbr btn-hover">
+                                <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960"><path d="M185-80q-17 0-29.5-12.5T143-122v-105q0-90 56-159t144-88q-40 28-62 70.5T259-312v190q0 11 3 22t10 20h-87Zm147 0q-17 0-29.5-12.5T290-122v-190q0-70 49.5-119T459-480h189q70 0 119 49t49 119v64q0 70-49 119T648-80H332Zm148-484q-66 0-112-46t-46-112q0-66 46-112t112-46q66 0 112 46t46 112q0 66-46 112t-112 46Z"/>
+                            </svg>
+                              
+                            </button>
+                        </abbr>
+                    </div>
+                </div>
+
+                <!-- Add Button -->
+                <div class="add-deal__container">
+                    <div class="btn-group box-shadow-1">
+                        <!-- Add btn + svg -->
+                        <abbr title="Add a new contact">
+                            <button class="btn-filter pointer btn-btl-bbl btn-btr-bbr add-clr btn-hover btn-size-m">
+                                <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                                <p class="add-deal-txt">Add</p>
+                            </button>
+                        </abbr>
+                    </div>
+                </div>
+
+                <!-- Pipeline & Account Filter -->
+                <div class="filter_container">
+                    <div class="btn-group">
+                        <div class="pipeline-filter__container">
+                            <div class="btn-group box-shadow-1">
+                                <!-- Pipeline Filter Button -->
+                                <abbr title="Contacts">
+                                    <button class="btn-filter pointer btn-btl-bbl btn-size-l btn-hover" id="pipeline-filter">
+                                        <div class="pipeline-filter-wrapper">
+                                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-40.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-23.5 48.5T486-314q-33 0-58.5-20.5T390-396l-66 26q14 48 43.5 77.5T444-252v52Zm36 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                                            </svg>
+                                            <p class="pipeline-txt">Kontakte</p>
+                                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960">
+                                                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </abbr>
+                                <!-- Pipeline Filter Dropdown Menu -->
+                                <div class="pipeline_sublinks" id="pipeline-sublinks">
+                                    <ul class="pipline_sublinks_ul">
+                                        <li class="pipeline-dd-links">
+                                            <a href="">A-Z-Sortieren</a>
+                                        </li>
+                                        <li class="pipeline-dd-links">
+                                            <a href="">Nach Regionen...</a>
+                                        </li>
+                                    </ul>
+            
+                                </div>
+                                <!-- Edit Button  -->
+                                <abbr title="Edit contacts">
+                                    <button class="btn-filter pointer btn-btr-bbr btn-size-s btn-hover">
+                                        <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                            <path
+                                                d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                                        </svg>
+                                    </button>
+                                </abbr>
+                            </div>
+                        </div>
+                        <!-- Account Filter  -->
+                        <div class="person-filter__container">
+                            <div class="btn-group box-shadow-1">
+                                <!-- Account Button -->
+                                <abbr title="Show accounts">
+                                    <button class="btn-filter pointer btn-btl-bbl btn-btr-bbr btn-size-l btn-hover" id="btn-account-filter">
+                                        <div class="pipeline-filter-wrapper">
+                                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960">
+                                                <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
+                                            </svg>
+                                            <p class="pipeline-txt">Benutzer</p>
+                                            <svg class="svg-hw" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960">
+                                                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </abbr>
+                                <!-- Account Dropdown Menu -->
+                                <div class="pipeline_sublinks" id="account-dashboard-sublinks">
+                                    <ul class="pipline_sublinks_ul">
+                                        <li class="pipeline-dd-links">
+                                            <a href="">Max Min</a>
+                                        </li>
+                                        <li class="pipeline-dd-links">
+                                            <a href="">Mustermann</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marquee: News Banner -->
+                <div class="news-banner">
+                    <div class="banner_container ">
+                        <p class="banner_text btn-btl-bbl btn-btr-bbr box-shadow-1"><span class="offset-live">Live<br><span class="offset-news">News</span></span></p>
+                        <!-- News Banner -->
+                        <marquee class="marquee box-shadow-1" behavior="" direction="">Hier sollen ein paar News von Mitarbeitern erscheinen (Challenges für den psychologischen Aspekt). Entweder slider, oder einmalig kurz</marquee>
+                    </div>
+                </div>
+
+                <!-- Dashboard Pipelines View -->
+                 <!-- Dashboard Container Menu KPI In Dashboard Header -->
+                 <div class="dashboard_container">
+                    <!-- Dashboard KPI Header Container -->
+                    <div class="dashboard_header">
+                        <!-- Dashboard KPI Item1 -->
+                        <div class="db_header_item">
+                            <abbr title="Contacts">
+                            <h4>1234</h4>
+                            <p>Contacts</p>
+                            </abbr>
+                        </div>
+                        <!-- Dashboard KPI Item1 -->
+                        <div class="db_header_item">
+                            <abbr title="No doubles. Good work!">
+                                <h4>0</h4>
+                                <p>doubles</p>
+                            </abbr>
+
+                            
+                        </div>
+                        <!-- Dashboard KPI Item1 -->
+                        <div class="db_header_item">
+                            <abbr title="What is one of your costumers worth for your company?">
+                                <h4>1230 €</h4>
+                                <p>Contact Value</p>
+                            </abbr>
+                        </div>
+                        <!-- Dashboard KPI Item1 -->
+                        <div class="db_header_item">
+                            
+                            <abbr title="total revenue in Pipeline">
+                                <h4>780k €</h4>
+                                <p>Your Total Revenue</p>  
+                            </abbr>
+                            
+                        </div>
+                        <div class="db_header_item_news">
+                            
+                            <div class="news_container">
+                                <abbr title="Proile Picture">
+                                    <div class="news_profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="532" height="532" viewBox="0 0 532 532" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g>
+                                                <g>
+                                                    <circle cx="270.759" cy="260.92941" r="86.34897" fill="#a0616a"/>
+                                                    <polygon points="199.2879 366.61365 217.2879 320.61365 310.2879 306.61365 320.28003 408.44043 226.28003 410.44043 199.2879 366.61365" fill="#a0616a"/>
+                                                </g>
+                                                <path d="M357.94449,276.8613c-1.12067,4.48965-3.38602,15.17972-6.9238,15.23233-2.89023,.04208-5.65668-46.33466-2.76953-54.00568,3.31638-8.81271-5.39886-19.96062-11.96411-25.6832-11.80423-10.2894-38.00696,11.80466-64.65118,1.79587-.70633-.26482-.56558-.23502-8.97934-3.59174-25.88966-10.32974-27.2506-10.62788-28.73386-10.77521-12.55046-1.24167-27.86705,9.02844-34.12146,21.55038-6.50168,13.01653-1.06937,24.18106-7.18346,55.67184-.71246,3.67065-1.83138,8.90216-3.59174,8.97934-3.21819,.14029-6.3605-17.04846-7.18346-21.55038-3.44792-18.86186-6.7722-37.04675,0-57.46771,.73878-2.22729,5.29158-10.49458,14.36693-26.93799,13.0744-23.68825,19.65018-35.57709,21.55038-37.7132,13.62859-15.32624,38.43575-29.30734,59.26357-23.34626,10.52704,3.01299,8.63953,7.85691,21.55038,12.57105,23.00821,8.40057,43.00476-1.87303,46.69254,5.3876,1.9537,3.84602-3.51236,7.01686-3.59174,14.36693-.13593,12.6114,15.81424,16.25575,25.14212,28.73386,5.01447,6.70819,13.59753,6.78012-8.87228,96.78212l.00003,.00003Z" fill="#2f2e41"/>
+                                            </g>
+                                        <path d="M464.92017,442.61035c-3.48022,3.91016-7.09009,7.74023-10.83008,11.48047-50.23999,50.23926-117.04004,77.90918-188.09009,77.90918-61.40991,0-119.63989-20.66992-166.75-58.71973-.03003-.01953-.05005-.04004-.07983-.07031-6.25-5.03906-12.30005-10.39941-18.14014-16.05957,.10986-.87988,.22998-1.75,.35986-2.61035,.82007-5.7998,1.73022-11.33008,2.75-16.41992,8.3501-41.71973,118.22021-85.51953,121.08008-86.66016,.04004-.00977,.06006-.01953,.06006-.01953,0,0,14.14014,52.12012,74.72998,51.4502,41.27002-.4502,33.27002-51.4502,33.27002-51.4502,0,0,.5,.09961,1.43994,.2998,11.91992,2.53027,94.68018,20.70996,127.33008,45.52051,9.94995,7.55957,17.08984,23.66016,22.21997,42.85938,.21997,.82031,.42993,1.66016,.65015,2.49023Z" fill="#6c63ff"/>
+                                        <path d="M454.09009,77.91016C403.8501,27.6709,337.05005,0,266,0S128.15015,27.6709,77.90991,77.91016C27.67017,128.15039,0,194.9502,0,266c0,64.85059,23.05005,126.16016,65.29004,174.57031,4.03003,4.62988,8.23999,9.13965,12.61987,13.52051,1.03003,1.0293,2.07007,2.05957,3.12012,3.05957,5.84009,5.66016,11.89014,11.02051,18.14014,16.05957,.02979,.03027,.0498,.05078,.07983,.07031,47.11012,38.0498,105.3401,58.71973,166.75001,58.71973,71.05005,0,137.8501-27.66992,188.09009-77.90918,3.73999-3.74023,7.34985-7.57031,10.83008-11.48047,43.36987-48.71973,67.07983-110.83984,67.07983-176.61035,0-71.0498-27.66992-137.84961-77.90991-188.08984Zm10.17993,362.20996c-7.86987,8.9502-16.33008,17.37012-25.33008,25.18066-17.06982,14.84961-36.06982,27.5293-56.55981,37.62988-7.19019,3.5498-14.56006,6.7793-22.1001,9.66992-29.29004,11.24023-61.08008,17.39941-94.28003,17.39941-32.04004,0-62.76001-5.73926-91.18994-16.23926-11.67017-4.30078-22.94995-9.41016-33.78003-15.26074-1.59009-.85938-3.16992-1.72949-4.73999-2.61914-8.26001-4.68066-16.25-9.79004-23.91992-15.31055-10.98999-7.87988-21.3501-16.58984-30.98022-26.03027-5.3999-5.29004-10.55981-10.7998-15.48975-16.5293C26.09009,391.77051,2,331.65039,2,266,2,120.43066,120.42993,2,266,2s264,118.43066,264,264c0,66.66016-24.82983,127.62012-65.72998,174.12012Z" fill="#3f3d56"/>
+                                        </svg>
+                                    </div>
+                                </abbr>
+                            <abbr title="What is the company doing?">
+                                    <p class="news-text">NameXY has marked a cold Lead as a warm one. Congrats! 🥳</p>
+                                </div> 
+                            </abbr>
+                            
+                        </div>
+                    </div>
+                    <!-- Items end -->
+                </div>
+                <!-- Dashboard Area = Pipeline -->
+                <div class="dashboard_area contact_wrapper">
+
+                    <table>
+                        <!-- Row 0 Table Header -->
+                        <tr> 
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Telefon</th>
+                            <th>Mail</th>
+                            <th colspan="4">Adresse</th>
+                            <!-- Str., Plz, Ort, Land -->
+                            <th>Unternehmen</th>
+                            <th>Besitzer</th>
+                            <th>Angelegt am</th>
+                          
+
+                        </tr>
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+
+    <!-- Some additional lines to check if the table has a scrollbar... now, it hasnt but is still scrollable. ;-) -->
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>        
+                        <!-- Row 1 Contact-->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>Max</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>test</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+
+                        <!-- Row 2 Contact -->
+                        <tr>
+                            <!-- Firstname -->
+                            <td>test</td>
+                            <!-- Lastname -->
+                            <td>Mustermann</td>
+                            <!-- Phone -->
+                            <td>+49 7123 456789-0</td>
+                            <!-- Mail -->
+                            <td>max.mustermann@muster.de</td>
+                            <!-- Adress -->
+                            <td>Strasse 1</td>
+                            <!-- Zip Code -->
+                            <td>70181</td>
+                            <!-- City -->
+                            <td>Stuttgart</td>
+                            <!-- State -->
+                            <td>Deutschland</td>
+                            <!-- Company -->
+                            <td>Lucky Employees Ltd.</td>
+                            <!-- Ownership -->
+                            <td>John Doe</td>
+                            <!-- added on -->
+                            <td>14.08.2024</td>
+                           
+                        </tr>
+                        
+                    </table>
+
+                </div>
+            </main>
+        </section>
+
+    <!-- </div> -->
+    
+    <script src="JavaScript/dashboard.js"></script>
+</body>
+</html>

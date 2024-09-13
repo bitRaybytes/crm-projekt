@@ -1,0 +1,10 @@
+.analyze_container{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 13;
+    padding: 0 15px;
+    background-color: red;
+    overflow: scroll;
+}
+

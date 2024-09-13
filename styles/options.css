@@ -1,0 +1,36 @@
+.settings_container{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 13;
+
+    background-color: var(--clr-nav-100);
+
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-areas: "items variables";
+    margin: 10px 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.588);
+    border-radius: 10px;
+
+    /* Items, you can choose for what to change */
+    .settings_items{
+        grid-area: items;
+        /* background-color: blue; */
+        border-right: 1px solid var(--clr-nav-85);
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.588);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    /* Variables in items, you can set to change different options */
+    .settings_variables{
+        grid-area: variables;
+        /* background-color: aqua; */
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+    
+}
+
+
