@@ -9,6 +9,18 @@ login_window.title("Bitte anmelden") # window title
 # login_window.geometry("800x800") # window size
 login_window.state("zoomed")
 
+
+def user_login():
+    username = "Ray"
+    password = "12345"
+    user_pw = password
+    if login_title_entry.get() == username:
+        print("Succesfully logged in")
+    elif password_title_entry.get() == password:
+        print("Password correct")
+    else: 
+        print("Invalid login.")
+
 # Navigation Bar (Menu)
 # create a new navigaton bar and asign it to the login window
 navigation = Menu(login_window)
@@ -46,7 +58,7 @@ password_title_entry = Entry(login_window) # Entry for username
 password_title_entry.place(relx=.5, rely=.5, height=40, width=340, anchor=CENTER)
 
 # Login and register buttons
-login_btn = Button(login_window, text="Anmelden", activebackground="gray", cursor="") #need to set up the commands like =user_login()
+login_btn = Button(login_window, text="Anmelden", activebackground="gray", cursor="", command=user_login) #need to set up the commands like =user_login()
 login_btn.place(relx=.4, rely=.6, width=150, height=35)
 register_btn = Button(login_window, text="Registrieren", command=register_form.open_register_form_window) #need to set up the commands like =user_register()
 register_btn.place(relx=0.5, rely=.6, height=35, width=150)
