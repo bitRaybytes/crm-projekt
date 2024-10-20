@@ -13,7 +13,6 @@ def open_register_form_window():
     global password_confirm_entry
     global register_btn
     global close_btn
-
     
     register_window = Tk()
     register_window.title("Kostenlos registrieren")
@@ -24,15 +23,17 @@ def open_register_form_window():
     title.place(relx=0.5, rely=0.05, anchor=CENTER)
 
     def user_registration():
-
+        try:
             if email_entry.get() == "":
                 error_messages_display.config(text=error_messages[0])
             elif password_entry.get() == "":
                 error_messages_display.config(text=error_messages[2])
             elif password_confirm_entry.get() == "":
                 error_messages_display.config(text=error_messages[5])
-            else:
-                print("valid thing")
+            elif email_entry.get() == "" or password_entry.get() == "" or password_confirm_entry.get() == "":
+                 error_messages_display.config(text=error_messages[7])
+        except:
+                register_window.destroy
 
 
     # EMail label and entry
@@ -44,13 +45,13 @@ def open_register_form_window():
     # Password label and entry
     password_lable = Label(register_window, text="Bitte gib ein Password ein:", font=("Arial", 18))
     password_lable.place(relx=.5, rely=.3, height=40, width=340, anchor=CENTER)
-    password_entry = Entry(register_window)
+    password_entry = Entry(register_window, show="*")
     password_entry.place(relx=.5, rely=.37, height=40, width=340, anchor=CENTER)
 
     # Password conformation label and entry
     password_confirm_label = Label(register_window, text="Passwort wiederholen:", font=("Arial", 18))
     password_confirm_label.place(relx=.5, rely=.46, height=40, width=340, anchor=CENTER)
-    password_confirm_entry = Entry(register_window)
+    password_confirm_entry = Entry(register_window, show="*")
     password_confirm_entry.place(relx=.5, rely=.53, height=40, width=340, anchor=CENTER)
     
     # Login and register buttons
@@ -62,14 +63,14 @@ def open_register_form_window():
 
     # Error messages
     error_messages = [
-        "Bitte E-Mail Adresse eingeben! \n"            #0
-        "E-Mail darf nicht leer sein \n"               #1
-        "Bitte Password eingeben! \n"                  #2
-        "Bitte Password wiederholen \n"                #3
-        "Password darf nicht leer sein \n"             #4
-        "Bitte Password wiederholen \n"                #5
-        "Passwort wiederholen darf nicht leer sein \n" #6
-        "Felder dürfen nicht leer sein \n"             #7
+        "Bitte E-Mail Adresse eingeben!",            #0
+        "E-Mail darf nicht leer sein",               #1
+        "Bitte Password eingeben!",                  #2
+        "Bitte Password wiederholen",                #3
+        "Password darf nicht leer sein",             #4
+        "Bitte Password wiederholen",                #5
+        "Passwort wiederholen darf nicht leer sein", #6
+        "Felder dürfen nicht leer sein"              #7
     ]
 
 
